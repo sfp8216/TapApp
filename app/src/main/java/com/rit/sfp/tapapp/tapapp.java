@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class tapapp extends AppCompatActivity {
 
     @Override
@@ -13,12 +15,15 @@ public class tapapp extends AppCompatActivity {
         setContentView(R.layout.activity_tapapp);
     }
 
-    //Toast is a popup window
-    //Length_Long makes the toast stay for a while
+    //V2 print a number from an array
     public void onButtonTap(View v){
-        Toast myToast = Toast.makeText(getApplicationContext(), "Ouch!",Toast.LENGTH_LONG);
-
-        //To get the popup to show up
+        Random rnd = new Random();
+        int [] myArray = new int[] {1,2,3,4,5,6,7,8,9,10};
+        int response = myArray[rnd.nextInt(10)];
+        StringBuilder myMsg = new StringBuilder();
+        myMsg.append("Your secret number is: " + response);
+        Toast myToast = Toast.makeText(getApplicationContext(), myMsg, Toast.LENGTH_LONG);
         myToast.show();
     }
+
 }
