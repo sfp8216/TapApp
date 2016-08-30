@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TapApp</string>
+    <string name="hello_world">Tap me if you dare</string>
+    <string name="button_txt">Tap Me!</string>
+</resources>
